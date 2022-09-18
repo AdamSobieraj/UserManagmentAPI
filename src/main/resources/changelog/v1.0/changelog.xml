@@ -1,0 +1,26 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+<!--    Template for new migrations, remember always to:-->
+<!--    - treat 000 as index of change and increment it +1-->
+<!--    - always add rollback script-->
+<!--    -->
+<!--    <changeSet id="000-create-type-of-action.sql" author="author">-->
+<!--        <sqlFile path="create/000-create-type-of-action.sql" relativeToChangelogFile="true" endDelimiter="go" />-->
+<!--        <rollback>-->
+<!--            <sqlFile path="drop/000-drop-type-of-action.sql" relativeToChangelogFile="true"/>-->
+<!--        </rollback>-->
+<!--    </changeSet>-->
+<!--    -->
+
+    <changeSet id="016-email-template-create-for-admin-employ-initial-processing.sql" author="Adam">
+        <sqlFile path="create/001-create-table-employee.sql"
+                 relativeToChangelogFile="true" endDelimiter="go"/>
+        <rollback>
+            <sqlFile path="drop/001-drop-table-employee.sql"
+                     relativeToChangelogFile="true"/>
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>
