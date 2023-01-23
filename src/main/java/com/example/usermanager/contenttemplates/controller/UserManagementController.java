@@ -19,7 +19,6 @@ public class UserManagementController {
 
     private UserManagementService userManagementService;
 
-
     @ApiOperation(
             value = "Returns Employee for specified id",
             tags = { "User Management Controller" }
@@ -28,7 +27,7 @@ public class UserManagementController {
             @ApiResponse(code = 200, message = "User found successfully"),
             @ApiResponse(code = 404, message = "Indicates the requested process instance was not found.")
     })
-    @GetMapping(value = "/finduserbyid")
+    @GetMapping(value = "/finduserbyid")//TODO
     ResponseEntity<?> findUserById(@ApiParam(required = true, name = "userId", example = "1") @RequestParam Integer userId) {
         EmployeeDto employeeDto = userManagementService.findUserById(userId);
         return ResponseEntity.ok(employeeDto);
